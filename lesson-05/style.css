@@ -1,0 +1,15 @@
+/* Lesson 5: Introduction to JavaScript */
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+#output {
+  background-color: #fff;
+  padding: 20px;
+  border: 2px solid #3498db;
+  border-radius: 5px;
+  margin-top: 20px;
+}

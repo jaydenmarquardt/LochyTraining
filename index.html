@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lochy Training - HTML/CSS/JS Lessons</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      header {
+        text-align: center;
+        color: white;
+        padding: 40px 20px;
+      }
+
+      header h1 {
+        font-size: 3em;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      header p {
+        font-size: 1.2em;
+        opacity: 0.9;
+      }
+
+      .intro {
+        background-color: white;
+        border-radius: 15px;
+        padding: 30px;
+        margin-bottom: 30px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+      }
+
+      .intro h2 {
+        color: #2c3e50;
+        margin-bottom: 15px;
+      }
+
+      .intro p {
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 10px;
+      }
+
+      .lessons-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 25px;
+        margin-bottom: 40px;
+      }
+
+      .lesson-card {
+        background-color: white;
+        border-radius: 15px;
+        padding: 25px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        transition:
+          transform 0.3s,
+          box-shadow 0.3s;
+        text-decoration: none;
+        color: inherit;
+        display: block;
+      }
+
+      .lesson-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      }
+
+      .lesson-number {
+        display: inline-block;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 40px;
+        font-weight: bold;
+        margin-bottom: 15px;
+      }
+
+      .lesson-card h3 {
+        color: #2c3e50;
+        margin-bottom: 10px;
+        font-size: 1.3em;
+      }
+
+      .lesson-card p {
+        color: #666;
+        line-height: 1.5;
+        font-size: 0.95em;
+      }
+
+      .lesson-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 15px;
+      }
+
+      .tag {
+        background-color: #f0f0f0;
+        padding: 4px 10px;
+        border-radius: 12px;
+        font-size: 0.85em;
+        color: #555;
+      }
+
+      .tag.html {
+        background-color: #e34c26;
+        color: white;
+      }
+
+      .tag.css {
+        background-color: #264de4;
+        color: white;
+      }
+
+      .tag.js {
+        background-color: #f7df1e;
+        color: #000;
+      }
+
+      footer {
+        text-align: center;
+        color: white;
+        padding: 20px;
+        opacity: 0.9;
+      }
+
+      .progress-info {
+        background-color: rgba(255, 255, 255, 0.95);
+        border-radius: 15px;
+        padding: 20px;
+        margin-bottom: 30px;
+        text-align: center;
+      }
+
+      .progress-info h3 {
+        color: #2c3e50;
+        margin-bottom: 10px;
+      }
+
+      .progress-bar {
+        background-color: #e0e0e0;
+        height: 10px;
+        border-radius: 5px;
+        overflow: hidden;
+        margin: 15px 0;
+      }
+
+      .progress-fill {
+        background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+        height: 100%;
+        width: 0%;
+        transition: width 0.3s;
+      }
+
+      @media (max-width: 768px) {
+        header h1 {
+          font-size: 2em;
+        }
+
+        .lessons-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>🚀 Lochy Training</h1>
+        <p>HTML, CSS & JavaScript</p>
+      </header>
+
+      <div class="lessons-grid">
+        <a href="lesson-01/index.html" class="lesson-card" data-lesson="1">
+          <div class="lesson-number">1</div>
+          <h3>Basic HTML Structure</h3>
+          <p>
+            Learn the fundamental building blocks of HTML. Create headings,
+            paragraphs, and lists to build your first webpage.
+          </p>
+          <div class="lesson-tags">
+            <span class="tag html">HTML</span>
+          </div>
+        </a>
+
+        <a href="lesson-02/index.html" class="lesson-card" data-lesson="2">
+          <div class="lesson-number">2</div>
+          <h3>CSS Styling Basics</h3>
+          <p>
+            Make your webpage beautiful with CSS. Learn about colors, fonts,
+            selectors, and basic styling techniques.
+          </p>
+          <div class="lesson-tags">
+            <span class="tag html">HTML</span>
+            <span class="tag css">CSS</span>
+          </div>
+        </a>
+
+        <a href="lesson-03/index.html" class="lesson-card" data-lesson="3">
+          <div class="lesson-number">3</div>
+          <h3>CSS Box Model</h3>
+          <p>
+            Understand how spacing works in CSS. Master padding, margins,
+            borders, and the box model concept.
+          </p>
+          <div class="lesson-tags">
+            <span class="tag css">CSS</span>
+          </div>
+        </a>
+
+        <a href="lesson-04/index.html" class="lesson-card" data-lesson="4">
+          <div class="lesson-number">4</div>
+          <h3>Flexbox Layout</h3>
+          <p>
+            Create modern, responsive layouts with Flexbox. Learn to align and
+            distribute items easily.
+          </p>
+          <div class="lesson-tags">
+            <span class="tag css">CSS</span>
+          </div>
+        </a>
+
+        <a href="lesson-05/index.html" class="lesson-card" data-lesson="5">
+          <div class="lesson-number">5</div>
+          <h3>Introduction to JavaScript</h3>
+          <p>
+            Start coding with JavaScript! Learn about variables, data types, and
+            how to use the browser console.
+          </p>
+          <div class="lesson-tags">
+            <span class="tag js">JavaScript</span>
+          </div>
+        </a>
+
+        <a href="lesson-06/index.html" class="lesson-card" data-lesson="6">
+          <div class="lesson-number">6</div>
+          <h3>DOM Manipulation</h3>
+          <p>
+            Make your pages interactive! Learn to select and modify HTML
+            elements using JavaScript.
+          </p>
+          <div class="lesson-tags">
+            <span class="tag js">JavaScript</span>
+          </div>
+        </a>
+
+        <a href="lesson-07/index.html" class="lesson-card" data-lesson="7">
+          <div class="lesson-number">7</div>
+          <h3>Event Handlers</h3>
+          <p>
+            Respond to user actions like clicks and key presses. Build an
+            interactive counter application.
+          </p>
+          <div class="lesson-tags">
+            <span class="tag js">JavaScript</span>
+          </div>
+        </a>
+
+        <a href="lesson-08/index.html" class="lesson-card" data-lesson="8">
+          <div class="lesson-number">8</div>
+          <h3>Forms and Validation</h3>
+          <p>
+            Work with user input. Learn to validate form data and provide
+            helpful feedback to users.
+          </p>
+          <div class="lesson-tags">
+            <span class="tag html">HTML</span>
+            <span class="tag js">JavaScript</span>
+          </div>
+        </a>
+
+        <a href="lesson-09/index.html" class="lesson-card" data-lesson="9">
+          <div class="lesson-number">9</div>
+          <h3>CSS Animations</h3>
+          <p>
+            Bring your pages to life with animations. Create smooth transitions
+            and keyframe animations.
+          </p>
+          <div class="lesson-tags">
+            <span class="tag css">CSS</span>
+            <span class="tag js">JavaScript</span>
+          </div>
+        </a>
+
+        <a href="lesson-10/index.html" class="lesson-card" data-lesson="10">
+          <div class="lesson-number">10</div>
+          <h3>Todo List App</h3>
+          <p>
+            Build a complete application! Combine everything you've learned to
+            create a fully functional todo list.
+          </p>
+          <div class="lesson-tags">
+            <span class="tag html">HTML</span>
+            <span class="tag css">CSS</span>
+            <span class="tag js">JavaScript</span>
+          </div>
+        </a>
+
+        <a href="lesson-11/index.html" class="lesson-card" data-lesson="11">
+          <div class="lesson-number">11</div>
+          <h3>Variables & Data Types</h3>
+          <p>
+            Master JavaScript fundamentals! Learn about var, let, const,
+            primitive types, reference types, and variable scope.
+          </p>
+          <div class="lesson-tags">
+            <span class="tag js">JavaScript</span>
+          </div>
+        </a>
+
+        <a href="lesson-12/index.html" class="lesson-card" data-lesson="12">
+          <div class="lesson-number">12</div>
+          <h3>Conditionals & Control Flow</h3>
+          <p>
+            Make decisions in your code! Learn if/else statements, switch cases,
+            comparison operators, and ternary expressions.
+          </p>
+          <div class="lesson-tags">
+            <span class="tag js">JavaScript</span>
+          </div>
+        </a>
+
+        <a href="lesson-13/index.html" class="lesson-card" data-lesson="13">
+          <div class="lesson-number">13</div>
+          <h3>Functions</h3>
+          <p>
+            Write reusable code! Master function declarations, expressions,
+            arrow functions, parameters, and return values.
+          </p>
+          <div class="lesson-tags">
+            <span class="tag js">JavaScript</span>
+          </div>
+        </a>
+
+        <a href="lesson-14/index.html" class="lesson-card" data-lesson="14">
+          <div class="lesson-number">14</div>
+          <h3>Objects</h3>
+          <p>
+            Organize your data with objects! Learn object creation, properties,
+            methods, destructuring, and the 'this' keyword.
+          </p>
+          <div class="lesson-tags">
+            <span class="tag js">JavaScript</span>
+          </div>
+        </a>
+
+        <a href="lesson-15/index.html" class="lesson-card" data-lesson="15">
+          <div class="lesson-number">15</div>
+          <h3>Arrays & Loops</h3>
+          <p>
+            Work with collections of data! Master arrays, for loops, while
+            loops, for...of, and array manipulation methods.
+          </p>
+          <div class="lesson-tags">
+            <span class="tag js">JavaScript</span>
+          </div>
+        </a>
+
+        <a href="lesson-16/index.html" class="lesson-card" data-lesson="16">
+          <div class="lesson-number">16</div>
+          <h3>Array Methods</h3>
+          <p>
+            Transform and filter data like a pro! Learn map, filter, forEach,
+            reduce, find, some, and every methods.
+          </p>
+          <div class="lesson-tags">
+            <span class="tag js">JavaScript</span>
+          </div>
+        </a>
+
+        <a href="lesson-17/index.html" class="lesson-card" data-lesson="17">
+          <div class="lesson-number">17</div>
+          <h3>JSON & Data Storage</h3>
+          <p>
+            Work with JSON data! Learn JSON.parse, JSON.stringify, localStorage,
+            and how to persist data in the browser.
+          </p>
+          <div class="lesson-tags">
+            <span class="tag js">JavaScript</span>
+          </div>
+        </a>
+
+        <a href="lesson-18/index.html" class="lesson-card" data-lesson="18">
+          <div class="lesson-number">18</div>
+          <h3>Fetch API & Async/Await</h3>
+          <p>
+            Connect to APIs and handle async operations! Master fetch, promises,
+            async/await, and error handling.
+          </p>
+          <div class="lesson-tags">
+            <span class="tag js">JavaScript</span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <script>
+      // Load progress from localStorage
+      function loadProgress() {
+        const completed = JSON.parse(
+          localStorage.getItem("completedLessons") || "[]",
+        );
+        const progressFill = document.getElementById("progressFill");
+        const progressText = document.getElementById("progressText");
+
+        const percentage = (completed.length / 18) * 100;
+        progressFill.style.width = percentage + "%";
+        progressText.textContent = `${completed.length} of 18 lessons completed`;
+
+        // Mark completed lessons
+        completed.forEach((lesson) => {
+          const card = document.querySelector(`[data-lesson="${lesson}"]`);
+          if (card) {
+            card.style.opacity = "0.7";
+            card.style.position = "relative";
+            const badge = document.createElement("div");
+            badge.textContent = "✓";
+            badge.style.cssText =
+              "position: absolute; top: 10px; right: 10px; background: #2ecc71; color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;";
+            card.appendChild(badge);
+          }
+        });
+      }
+
+      // Mark lesson as completed (you can add buttons in each lesson to trigger this)
+      function markComplete(lessonNumber) {
+        const completed = JSON.parse(
+          localStorage.getItem("completedLessons") || "[]",
+        );
+        if (!completed.includes(lessonNumber)) {
+          completed.push(lessonNumber);
+          localStorage.setItem("completedLessons", JSON.stringify(completed));
+          loadProgress();
+        }
+      }
+
+      // Load progress on page load
+      loadProgress();
+    </script>
+  </body>
+</html>

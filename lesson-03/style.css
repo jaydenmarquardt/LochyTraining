@@ -1,0 +1,14 @@
+/* Lesson 3: CSS Box Model */
+/* TODO: Add padding, margin, and border to .box1 */
+/* TODO: Add different margin values to .box2 */
+/* TODO: Add border styling to .box3 */
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.box {
+  background-color: #e8f4f8;
+  margin-bottom: 10px;
+}

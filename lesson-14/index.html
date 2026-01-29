@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson 14: Objects</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>📦 Objects</h1>
+        <p>Learn to organize data with objects</p>
+        <a href="../index.html" class="back-link">← Back to Lessons</a>
+      </header>
+
+      <section class="project">
+        <h2>Project 1: User Profile Manager</h2>
+        <div class="user-profile">
+          <div class="input-group">
+            <input type="text" id="userName" placeholder="Name" />
+            <input type="number" id="userAge" placeholder="Age" />
+            <input type="email" id="userEmail" placeholder="Email" />
+            <button onclick="createProfile()">Create Profile</button>
+          </div>
+          <div id="profileOutput" class="output"></div>
+        </div>
+      </section>
+
+      <section class="project">
+        <h2>Project 2: Product Catalog</h2>
+        <div class="product-catalog">
+          <div class="input-group">
+            <input type="text" id="productName" placeholder="Product name" />
+            <input type="number" id="productPrice" placeholder="Price" />
+            <input type="number" id="productStock" placeholder="Stock" />
+            <button onclick="addProduct()">Add Product</button>
+          </div>
+          <div id="catalogOutput" class="output"></div>
+        </div>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

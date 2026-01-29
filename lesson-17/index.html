@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson 17: JSON & Data Storage</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>📋 JSON & Data Storage</h1>
+        <p>Learn to work with JSON and persist data</p>
+        <a href="../index.html" class="back-link">← Back to Lessons</a>
+      </header>
+
+      <section class="project">
+        <h2>Project 1: JSON Data Converter</h2>
+        <div class="converter">
+          <div class="input-section">
+            <h3>Object to JSON</h3>
+            <input type="text" id="personName" placeholder="Name" />
+            <input type="number" id="personAge" placeholder="Age" />
+            <input type="email" id="personEmail" placeholder="Email" />
+            <button onclick="convertToJSON()">Convert to JSON</button>
+            <div id="jsonOutput" class="output"></div>
+          </div>
+
+          <div class="input-section">
+            <h3>JSON to Object</h3>
+            <textarea
+              id="jsonInput"
+              placeholder='Enter JSON: {"name":"John","age":30}'
+            ></textarea>
+            <button onclick="parseJSON()">Parse JSON</button>
+            <div id="objectOutput" class="output"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="project">
+        <h2>Project 2: Settings Manager (localStorage)</h2>
+        <div class="settings">
+          <div class="setting-item">
+            <label>Theme:</label>
+            <select id="theme">
+              <option value="light">Light</option>
+              <option value="dark">Dark</option>
+            </select>
+          </div>
+          <div class="setting-item">
+            <label>Font Size:</label>
+            <select id="fontSize">
+              <option value="small">Small</option>
+              <option value="medium">Medium</option>
+              <option value="large">Large</option>
+            </select>
+          </div>
+          <div class="setting-item">
+            <label>Notifications:</label>
+            <input type="checkbox" id="notifications" />
+          </div>
+          <div class="buttons">
+            <button onclick="saveSettings()">Save Settings</button>
+            <button onclick="loadSettings()">Load Settings</button>
+            <button onclick="clearSettings()">Clear Settings</button>
+          </div>
+          <div id="settingsOutput" class="output"></div>
+        </div>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

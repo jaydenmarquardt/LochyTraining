@@ -1,0 +1,41 @@
+/* Lesson 7: Event Handlers */
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+#myButton {
+  background-color: #3498db;
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#myButton:hover {
+  background-color: #2980b9;
+}
+
+#message {
+  margin-top: 20px;
+  font-size: 1.3em;
+  color: #2c3e50;
+}
+
+.counter {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #ecf0f1;
+  border-radius: 5px;
+}
+
+#count {
+  color: #e74c3c;
+  font-weight: bold;
+}

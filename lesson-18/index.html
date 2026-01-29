@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson 18: Fetch API & Async/Await</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>🌐 Fetch API & Async/Await</h1>
+        <p>Learn to connect to APIs and handle async operations</p>
+        <a href="../index.html" class="back-link">← Back to Lessons</a>
+      </header>
+
+      <section class="project">
+        <h2>Project 1: Random User Generator</h2>
+        <div class="user-generator">
+          <p>API: <code>https://randomuser.me/api/</code></p>
+          <button onclick="fetchUser()">Get Random User</button>
+          <div id="userOutput" class="output loading-hidden">
+            <div class="loading">Loading...</div>
+            <div id="userData"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="project">
+        <h2>Project 2: Post Browser</h2>
+        <div class="post-browser">
+          <p>API: <code>https://jsonplaceholder.typicode.com/posts</code></p>
+          <div class="controls">
+            <button onclick="fetchAllPosts()">Get All Posts</button>
+            <input
+              type="number"
+              id="postId"
+              placeholder="Post ID"
+              min="1"
+              max="100"
+            />
+            <button onclick="fetchSinglePost()">Get Single Post</button>
+          </div>
+          <div id="postsOutput" class="output loading-hidden">
+            <div class="loading">Loading...</div>
+            <div id="postsData"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="project">
+        <h2>Project 3: Create New Post</h2>
+        <div class="create-post">
+          <input type="text" id="postTitle" placeholder="Post Title" />
+          <textarea id="postBody" placeholder="Post Body"></textarea>
+          <button onclick="createPost()">Create Post</button>
+          <div id="createOutput" class="output"></div>
+        </div>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson 16: Array Methods</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>🔧 Array Methods</h1>
+        <p>Master powerful array transformation methods</p>
+        <a href="../index.html" class="back-link">← Back to Lessons</a>
+      </header>
+
+      <section class="project">
+        <h2>Project 1: Data Transformer</h2>
+        <div class="transformer">
+          <p>Original numbers: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</p>
+          <div class="buttons">
+            <button onclick="showDoubled()">Double All (.map)</button>
+            <button onclick="showEvens()">Even Only (.filter)</button>
+            <button onclick="showSum()">Sum All (.reduce)</button>
+            <button onclick="findNumber()">Find > 5 (.find)</button>
+          </div>
+          <div id="transformOutput" class="output"></div>
+        </div>
+      </section>
+
+      <section class="project">
+        <h2>Project 2: Shopping Cart Calculator</h2>
+        <div class="cart">
+          <div id="productList" class="product-list"></div>
+          <div class="buttons">
+            <button onclick="showExpensive()">Show Expensive (>$20)</button>
+            <button onclick="calculateTotal()">Calculate Total</button>
+            <button onclick="applyDiscount()">Apply 10% Discount</button>
+            <button onclick="checkStock()">Check if All in Stock</button>
+          </div>
+          <div id="cartOutput" class="output"></div>
+        </div>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+/* Lesson 2: CSS Styling Basics */
+/* TODO: Style the body with a background color */
+/* TODO: Style h1 with a different color and larger font-size */
+/* TODO: Style .intro class with italic text */
+/* TODO: Style .highlight class with background color and padding */
+
+body {
+  font-family: Arial, sans-serif;
+}

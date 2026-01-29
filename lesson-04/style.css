@@ -1,0 +1,22 @@
+/* Lesson 4: Flexbox Layout */
+/* TODO: Make .container a flex container */
+/* TODO: Add justify-content and align-items properties */
+/* TODO: Add gap between flex items */
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.container {
+  background-color: #ecf0f1;
+  padding: 20px;
+  min-height: 200px;
+}
+
+.item {
+  background-color: #3498db;
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+}
