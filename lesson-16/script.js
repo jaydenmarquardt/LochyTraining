@@ -26,7 +26,7 @@ function showDoubled() {
   const output = document.getElementById("transformOutput");
 
   // Use map here
-  const doubled = [];
+  const doubled = numbers.map((num) => num * 2);
 
   output.innerHTML = `<strong>Doubled:</strong> [${doubled.join(", ")}]`;
 }
@@ -36,7 +36,7 @@ function showEvens() {
   const output = document.getElementById("transformOutput");
 
   // Use filter here
-  const evens = [];
+  const evens = numbers.filter((num) => num % 2 === 0);
 
   output.innerHTML = `<strong>Even numbers:</strong> [${evens.join(", ")}]`;
 }
@@ -46,7 +46,7 @@ function showSum() {
   const output = document.getElementById("transformOutput");
 
   // Use reduce here
-  const sum = 0;
+  const sum = numbers.reduce((total, num) => total + num, 0);
 
   output.innerHTML = `<strong>Sum of all numbers:</strong> ${sum}`;
 }
@@ -56,7 +56,7 @@ function findNumber() {
   const output = document.getElementById("transformOutput");
 
   // Use find here
-  const found = undefined;
+  const found = numbers.find((num) => num > 5);
 
   output.innerHTML = `<strong>First number > 5:</strong> ${found}`;
 }
@@ -66,8 +66,12 @@ function showExpensive() {
   const output = document.getElementById("cartOutput");
 
   // Use filter to get products with price > 20
-
+  const expensive = products.filter((p) => p.price > 20);
   output.innerHTML = "<strong>Expensive items (> $20):</strong><br>";
+
+  expensive.forEach((p) => {
+    output.innerHTML += `${p.name} - $${p.price}<br>`;
+  });
 }
 
 // TODO: Use .reduce() to calculate total price
@@ -75,8 +79,8 @@ function calculateTotal() {
   const output = document.getElementById("cartOutput");
 
   // Use reduce to sum all prices
-
-  output.innerHTML = `<strong>Total cart value:</strong> $0.00`;
+  const total = products.reduce((sum, item) => sum + item.price, 0);
+  output.innerHTML = `<strong>Total cart value:</strong> $${total}`;
 }
 
 // TODO: Use .map() to apply discount
@@ -84,8 +88,12 @@ function applyDiscount() {
   const output = document.getElementById("cartOutput");
 
   // Use map to create new array with 10% discount
-
+  const withDiscount = products.map((price) => price.price * 0.9);
   output.innerHTML = "<strong>Prices after 10% discount:</strong><br>";
+
+  products.forEach((p, i) => {
+    output.innerHTML += `${p.name} - $${withDiscount[i]}<br>`;
+  });
 }
 
 // TODO: Use .every() to check if all items are in stock
@@ -93,8 +101,8 @@ function checkStock() {
   const output = document.getElementById("cartOutput");
 
   // Use every or some
-
-  output.innerHTML = `<strong>All items in stock:</strong> ?`;
+  const stock = products.every((inStock) => inStock === "True");
+  output.innerHTML = `<strong>All items in stock? ${stock}</strong>`;
 }
 
 // Console examples

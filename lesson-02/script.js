@@ -1,2 +1,3 @@
-// Lesson 2: CSS Styling Basics
-console.log("Lesson 2 loaded!");
+// Lesson 1: Basic HTML Structure
+// JavaScript file - we'll use this in later lessons
+console.log("Lesson 1 loaded!");

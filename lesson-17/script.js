@@ -6,11 +6,16 @@ function convertToJSON() {
 
   // TODO: Create an object
   const person = {
-    // Add properties
+    name,
+    age,
+    email
   };
 
   // TODO: Use JSON.stringify() to convert object to JSON string
-  const jsonString = "";
+  const jsonString = JSON.stringify(person);
+  console.log(jsonString);
+
+  const prettyJSON = JSON.stringify(person, null, 2);
 
   // Display the JSON string
   const output = document.getElementById("jsonOutput");
@@ -27,7 +32,8 @@ function parseJSON() {
 
   try {
     // TODO: Use JSON.parse() to convert JSON string to object
-    const obj = null;
+    const jsonString = jsonInput;
+    const obj = JSON.parse(jsonString);
 
     // Display the object properties
     output.textContent = `Name: ${obj.name}\nAge: ${obj.age}`;
@@ -48,9 +54,14 @@ function saveSettings() {
 
   // TODO: Create settings object
   const settings = {
-    // Add properties
+   theme,
+   fontSize,
+   notifications
   };
 
+  localStorage.setItem("theme", JSON.stringify(theme));
+  localStorage.setItem("fontSize", JSON.stringify(fontSize));
+  localStorage.setItem("notifications", JSON.stringify(notifications));
   // TODO: Convert to JSON and save to localStorage
   // Use: localStorage.setItem('key', value)
 
@@ -64,10 +75,17 @@ function saveSettings() {
 function loadSettings() {
   const output = document.getElementById("settingsOutput");
 
+  const themeJSON = localStorage.getItem("theme");
+  const fontSizeJSON = localStorage.getItem("fontSize");
+  const notificationsJSON = localStorage.getItem("notifications");
   // TODO: Get from localStorage and parse JSON
   // Use: localStorage.getItem('key')
 
-  const settingsJSON = null;
+  const settingsJSON = {
+    themeJSON,
+    fontSizeJSON,
+    notificationsJSON
+  }
 
   if (!settingsJSON) {
     output.textContent = "No saved settings found.";
@@ -75,7 +93,15 @@ function loadSettings() {
   }
 
   // TODO: Parse JSON string to object
-  const settings = null;
+  const theme = JSON.parse(themeJSON);
+  const fontSize = JSON.parse(fontSizeJSON);
+  const notifications = JSON.parse(notificationsJSON);
+
+  const settings = {
+    theme,
+    fontSize,
+    notifications
+  }
 
   // Update UI with loaded settings
   document.getElementById("theme").value = settings.theme;
@@ -90,6 +116,10 @@ function loadSettings() {
 function clearSettings() {
   // TODO: Remove from localStorage
   // Use: localStorage.removeItem('key')
+  localStorage.removeItem("theme");
+  localStorage.removeItem("fontSize");
+  localStorage.removeItem("notifications");
+  localStorage.clear();
 
   // Reset UI to defaults
   document.getElementById("theme").value = "light";

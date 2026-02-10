@@ -12,6 +12,7 @@ function addTodo() {
   }
 
   // TODO: Add the task to the todos array using push()
+  todos.push(task);
 
   // Display todos
   displayTodos();
@@ -23,6 +24,7 @@ function addTodo() {
 // TODO: Remove a todo from the array
 function removeTodo(index) {
   // TODO: Remove item at index using splice()
+
 
   displayTodos();
 }
@@ -40,7 +42,16 @@ function displayTodos() {
 
   // TODO: Loop through todos and create HTML
   let html = "";
-  // Use a for loop here
+
+  for (const task of todos) {
+    console.log(task);
+
+    html += `
+      <div class="Todo List">
+        <h4>${task}</h4>
+      </div>
+    `;
+  }
 
   output.innerHTML = html;
 
@@ -62,6 +73,7 @@ function addNumber() {
   }
 
   // TODO: Add number to array
+  numbers.push(num);
 
   displayNumbers();
   calculateStats();
@@ -80,7 +92,15 @@ function displayNumbers() {
 
   // TODO: Loop through numbers and display them
   let html = "";
-  // Use a for loop or for...of loop
+  for (const num of numbers) {
+    console.log(num);
+
+    html += `
+      <div class="Numbers">
+        <h4>${num}</h4>
+      </div>
+    `;
+  }
 
   output.innerHTML = html;
 }
@@ -96,8 +116,23 @@ function calculateStats() {
 
   // TODO: Calculate sum, average, min, max using loops
   let sum = 0;
+  for (let i = 0; i < numbers.length; i++) { 
+    sum += numbers[i]; 
+  }
+
   let min = numbers[0];
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] < min) {
+      min = numbers[i];
+    } 
+  }
+
   let max = numbers[0];
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] > max) {
+      max = numbers[i];
+    }
+  }
 
   // Use a loop to calculate these values
 
