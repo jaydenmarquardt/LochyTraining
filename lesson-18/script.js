@@ -8,18 +8,18 @@ async function fetchUser() {
 
   try {
     // TODO: Use fetch() to get data from the API
-    // const response = await fetch('https://randomuser.me/api/');
+    const response = await fetch('https://randomuser.me/api/');
 
     // TODO: Check if response is ok
-    // if (!response.ok) {
-    //     throw new Error('Network response was not ok');
-    // }
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
 
     // TODO: Parse JSON response
-    // const data = await response.json();
+    const data = await response.json();
 
     // TODO: Extract user data and display
-    // const user = data.results[0];
+    const user = data.results[0];
 
     // Hide loading
     output.classList.remove("loading");
